@@ -19,6 +19,7 @@ export class QuestionsComponent implements OnInit {
   incorrectAns:number = 0;
   interval : any;
   progress: string = "0";
+  isQuizComleted : boolean = false;
   constructor(private queApi : QueServiceService) { }
 
   ngOnInit(): void {
@@ -45,20 +46,33 @@ export class QuestionsComponent implements OnInit {
   }
 
   answer(currentQue:number,option:any){
+
+    if(currentQue === this.queList.length){
+      this.isQuizComleted = true;
+      this.stopCounter();
+    }
+
     if(option.correct){
 
       this.points+=10;
       this.currentQue ++;
+      setTimeout(()=>{
+        this.getProgress();
+        this.correctAnswer ++ ;
+        this.resetCounter();
+      },1000);
       // this.points = this.points + 10;
-      this.correctAnswer ++ ;
-      this.resetCounter();
-      this.getProgress();
+
+
     }else{
+      setTimeout(()=>{
+        this.incorrectAns --;
+        this.currentQue ++ ;
+        this.resetCounter();
+        this.getProgress();
+      },1000);
       this.points-=10;
-      this.incorrectAns --;
-      this.currentQue ++ ;
-      this.resetCounter();
-      this.getProgress();
+
     }
 
   }
@@ -96,7 +110,8 @@ export class QuestionsComponent implements OnInit {
     this.progress = "0";
   }
   getProgress(){
-    this.progress = ((this.currentQue/this.queList)*100).toString();
+    this.progress = ((this.currentQue/this.queList.length)*100).toString();
     return this.progress;
   }
+
 }
