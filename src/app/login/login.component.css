@@ -1,0 +1,7 @@
+
+i{
+  font-size: 40px;
+}
+input::placeholder{
+  font-size: 14px;
+}

@@ -8,6 +8,10 @@ import { WelcomeComponent } from './component/welcome/welcome.component';
 import { QuestionsComponent } from './component/questions/questions.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ChangeBgDirective } from './change-bg.directive';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { ReactiveFormsModule } from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -15,12 +19,17 @@ import { ChangeBgDirective } from './change-bg.directive';
     HeaderComponent,
     WelcomeComponent,
     QuestionsComponent,
-    ChangeBgDirective
+    ChangeBgDirective,
+    LoginComponent,
+    SignupComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

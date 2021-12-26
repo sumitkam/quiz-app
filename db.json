@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signUpUsers": [
+    {
+      "fullName": "sumit",
+      "phone": "9925351401",
+      "email": "sumit@gmail.com",
+      "password": "sumit123",
+      "id": 1
+    },
+    {
+      "fullName": "ankit",
+      "phone": "8844559966",
+      "email": "ankit@gmail.com",
+      "password": "ankit123",
+      "id": 2
+    },
+    {
+      "fullName": "yamin",
+      "phone": "7755448899",
+      "email": "yamin@gmail.com",
+      "password": "yamini123",
+      "id": 3
+    },
+    {
+      "fullName": "asd",
+      "phone": "7788995566",
+      "email": "asd@gmail.com",
+      "password": "asd123",
+      "id": 4
+    },
+    {
+      "fullName": "vishal",
+      "phone": "8844559966",
+      "email": "vishal@gmail.com",
+      "password": "vishal123",
+      "id": 5
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

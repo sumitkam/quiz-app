@@ -1,14 +1,5 @@
 <div class="container mt-3">
   <div class="card">
-    <div class="d-flex justify-content-between p-3">
-      <div class="img">
-        <img src="https://img.icons8.com/color/96/000000/angularjs.png" alt="logo" width="90">
-      </div>
-      <div class="quiz-header">
-        <h4 class="name">Angular & Typescript</h4>
-        <span>Welcome {{name}}</span>
-      </div>
-    </div>
     <ng-container *ngIf="!isQuizComleted">
       <div class="d-flex justify-content-around py-3">
 
@@ -57,7 +48,10 @@
         <p>Total Worng Answers:{{incorrectAns}}</p>
         <p>Your Score:{{points}} Points</p>
       </div>
-      <button class="btn btn-info" routerLink="/welcome">Back to Home</button>
+     <div class="d-flex ml-auto">
+      <button class="btn btn-info" (click)="resetQuiz()">Restart Quiz</button>&nbsp;&nbsp;&nbsp;&nbsp;
+      <button class="btn btn-danger" routerLink="/login">Logout</button>
+     </div>
     </ng-container>
 
   </div>

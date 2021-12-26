@@ -1,0 +1,54 @@
+<section class="vh-100 gradient-custom">
+  <div class="container  h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow p-1 mb-5 bg-white rounded" style="border-radius: 15px;">
+          <div class="card-body p-2 p-md-5">
+            <div class="d-flex justify-content-center">
+              <i class="bi text-dark bi-person-circle"></i>
+            </div>
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center">Sign up</h3>
+            <form [formGroup]="signUpForm"  (ngSubmit)="signUp()">
+
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="firstName">Enter Full Name</label>
+                    <input type="text" #name formControlName="fullName" id="firstName" class="form-control form-control-lg" placeholder="Enter Full Name" />
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="lastName">Phone no.</label>
+                    <input type="tel" #phone formControlName="phone" id="lastName" class="form-control form-control-lg" placeholder="Enter phone no."/>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4 pb-2">
+                  <div class="form-outline">
+                    <label class="form-label" for="emailAddress">Email</label>
+                    <input type="email" #email formControlName="email" id="emailAddress" class="form-control form-control-lg" placeholder="Enter valid Email"/>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+                  <div class="form-outline">
+                    <label class="form-label" for="phoneNumber">Password</label>
+                    <input type="password" #password formControlName="password" id="phoneNumber" class="form-control form-control-lg" placeholder="Enter Password"/>
+                  </div>
+
+                </div>
+              </div>
+              <div class="mt-1 pt-2 d-flex justify-content-center justify-item-center ">
+                <button class="btn btn-info" type="submit">Sign up</button>
+              </div>
+              <hr>
+            <p class="text-center">Have alresdy an account ? <a routerLink="/login">Sign in </a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

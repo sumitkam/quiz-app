@@ -1,0 +1,27 @@
+<section class="vh-50" >
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow  mb-5 bg-white rounded">
+          <div class="card-body p-5 text-center">
+            <i class="bi text-dark w-50 bi-person-circle"></i>
+            <h3 class="mb-5">Sign in</h3>
+
+           <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="form-outline mb-4">
+              <input type="email" formControlName="email" id="email" class="form-control form-control-lg" placeholder="Enter Valid Email" />
+            </div>
+
+            <div class="form-outline mb-4">
+              <input type="password" formControlName="password" id="password" class="form-control form-control-lg"  placeholder="Enter valid Password"/>
+            </div>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+            <hr>
+            <p>If not register <a routerLink="/signup">Sign Up </a>here?</p>
+           </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

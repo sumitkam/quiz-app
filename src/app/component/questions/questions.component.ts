@@ -102,12 +102,15 @@ export class QuestionsComponent implements OnInit {
   }
 
   resetQuiz(){
+    this.isQuizComleted = false;
+    const randomElement = this.queList[Math.floor(Math.random() * this.queList.length)];
     this.resetCounter();
     this.getAllQue();
     this.points = 0;
     this.counter = 60;
     this.currentQue = 0;
     this.progress = "0";
+
   }
   getProgress(){
     this.progress = ((this.currentQue/this.queList.length)*100).toString();

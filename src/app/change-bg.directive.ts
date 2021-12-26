@@ -10,7 +10,7 @@ export class ChangeBgDirective {
 
   @HostListener('click') answer(){
     if(this.isCorrect){
-      this.render.setStyle(this.el.nativeElement,'background','blue');
+      this.render.setStyle(this.el.nativeElement,'background-color','green');
       this.render.setStyle(this.el.nativeElement,'color','#fff');
       this.render.setStyle(this.el.nativeElement,'border','1px solid grey');
     }
